@@ -37,7 +37,7 @@ function process(event) {
 
     setTimeout(() => {
       window.location.href = `https://api.whatsapp.com/send/?phone=%${phoneNumber}&text&type=phone_number&app_absent=1`;
-    }, 1600);
+    }, 1500);
   } else {
     Swal.fire({
       icon: "error",

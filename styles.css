@@ -65,3 +65,9 @@ body {
   background-color: #f2dede;
   border-color: #ebccd1;
 }
+
+@media screen and (max-width: 425px) {
+  .container {
+    margin: 45% auto !important;
+  }
+}
