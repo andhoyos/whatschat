@@ -30,7 +30,7 @@ function process(event) {
     Swal.fire({
       position: "top-center",
       icon: "success",
-      title: `let's chat with : ${phoneNumber}`,
+      text: `let's chat with : ${phoneNumber}`,
       showConfirmButton: false,
       timer: 1500,
     });

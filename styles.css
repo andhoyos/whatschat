@@ -65,6 +65,11 @@ body {
   background-color: #f2dede;
   border-color: #ebccd1;
 }
+form{
+  border: 2px solid gray;
+  border-radius: 15px;
+  padding: 5%;
+}
 
 @media screen and (max-width: 425px) {
   .container {
