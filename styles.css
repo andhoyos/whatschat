@@ -66,13 +66,21 @@ body {
   border-color: #ebccd1;
 }
 form{
+  background-color: rgba(0, 0, 0,.5);
+  color: #fff;
   border: 2px solid gray;
   border-radius: 15px;
   padding: 5%;
 }
 
+h4{
+  margin: 5%;
+}
 @media screen and (max-width: 425px) {
   .container {
     margin: 45% auto !important;
+  }
+  form{
+    padding: 10% 5%;
   }
 }
