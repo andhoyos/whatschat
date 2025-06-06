@@ -1,6 +1,7 @@
 html {
   height: 100%;
 }
+
 body {
   background-image: url("https://www.teahub.io/photos/full/0-7300_emoji-wallpaper-for-computer-emoji-movie-wallpaper-hd.jpg");
   background-size: cover;
@@ -38,7 +39,7 @@ body {
 }
 
 .btn:focus,
-.btn:hover {
+  .btn:hover {
   background-color: #3276b1;
   border-color: #285e8e;
 }
@@ -65,7 +66,8 @@ body {
   background-color: #f2dede;
   border-color: #ebccd1;
 }
-form{
+
+form {
   background-color: rgba(0, 0, 0,.5);
   color: #fff;
   border: 2px solid gray;
@@ -73,18 +75,24 @@ form{
   padding: 5%;
 }
 
-ul{
+ul {
   color: gray;
 }
 
-h4{
+h4 {
   margin: 5%;
 }
-@media screen and (max-width: 425px) {
+
+.iti__selected-dial-code {
+  color: dimgray;
+}
+
+@media screen and (max-width:425px) {
   .container {
     margin: 45% auto !important;
   }
-  form{
+  
+  form {
     padding: 10% 5%;
   }
 }

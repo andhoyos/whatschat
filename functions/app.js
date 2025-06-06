@@ -17,6 +17,7 @@ const phoneInput = window.intlTelInput(phoneInputField, {
   preferredCountries: ["us", "co", "in", "de"],
   initialCountry: "auto",
   geoIpLookup: getIp,
+  separateDialCode: true,
   utilsScript:
     "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
 });
@@ -24,8 +25,8 @@ const phoneInput = window.intlTelInput(phoneInputField, {
 function process(event) {
   event.preventDefault();
 
-  const phoneNumber = phoneInput.getNumber();
-
+  // const phoneNumber = phoneInput.getNumber();
+  phoneNumber = phoneInputField.value
   if (phoneInput.isValidNumber()) {
     Swal.fire({
       position: "top-center",
@@ -36,7 +37,7 @@ function process(event) {
     });
 
     setTimeout(() => {
-      window.location.href = `https://api.whatsapp.com/send/?phone=%${phoneNumber}&text&type=phone_number&app_absent=1`;
+      window.location.href = `https://api.whatsapp.com/send/?phone=${phoneNumber}&text&type=phone_number&app_absent=1`;
     }, 1500);
   } else {
     Swal.fire({
