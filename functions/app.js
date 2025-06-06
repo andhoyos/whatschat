@@ -25,8 +25,9 @@ const phoneInput = window.intlTelInput(phoneInputField, {
 function process(event) {
   event.preventDefault();
 
-  // const phoneNumber = phoneInput.getNumber();
-  phoneNumber = phoneInputField.value
+  const phoneNumber = phoneInput.getNumber();
+  let phoneNumberLink = phoneNumber.replace('+','');
+
   if (phoneInput.isValidNumber()) {
     Swal.fire({
       position: "top-center",
@@ -37,7 +38,7 @@ function process(event) {
     });
 
     setTimeout(() => {
-      window.location.href = `https://api.whatsapp.com/send/?phone=${phoneNumber}&text&type=phone_number&app_absent=1`;
+      window.location.href = `https://api.whatsapp.com/send/?phone=${phoneNumberLink}&text&type=phone_number&app_absent=1`;
     }, 1500);
   } else {
     Swal.fire({
